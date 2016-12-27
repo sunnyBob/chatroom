@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>聊天室</title>
+	<link rel="stylesheet" type="text/css" href="./libs/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+</head>
+<body>
+	<form action="javascript:;" class="loginForm">
+			<input type="text" name="nickname" placeholder="请输入昵称" required>
+			<input type="submit" name="connect" value="连接">
+	</form>
+	<div class="container-fluid">
+		<h1 class="title"></h1>
+		<div class="main">
+			<ul class="speakPane"></ul>
+			<ul class="userlist list-group">
+				<li class="list-group-item-info first">共<span id="onlinecount"></span>位在线用户</li>
+			</ul>
+		</div>
+		<div class="bottom form-inline">
+			<input type="button" name="emoji" id="emoji" class="form-control col-sm-2" value="emoji">
+			<input type="color" name="color" class="form-control col-sm-2">
+			<input type="text" name="speak" id="speak"  class="form-control col-sm-6">
+			<input type="submit" name="submit" value="发言" class="form-control col-sm-2">
+		</div>
+		<div class="voice">
+			<audio autoplay></audio>  
+		    <input type="button" value="开始录音" class = "btn btn-primary" onclick="startRecording()"/>  
+		    <input type="button" value="停止录音" class = "btn btn-danger" onclick="stopRecord()"/>  
+		    <input type="button" value="播放录音" class = "btn btn-warning" onclick="playRecord()"/> 
+		    <input type="button" value="发送" class = "btn btn-success" onclick="sendVoice()"/> 
+		</div>
+	</div>
+	
+	<div class="emoji"></div>
+	<script type="text/html" id="userlist">
+		{{#.}}
+			<li class="list-group-item">{{nickname}}</li>
+		{{/.}}
+	</script>
+
+	<script type="text/javascript" src="./libs/jquery.min.js"></script>
+	<script type="text/javascript" src="./libs/mustache.js"></script>
+	<script type="text/javascript" src="./libs/audio.js"></script>
+	<script type="text/javascript" src="./js/emoji.js"></script>
+	<script type="text/javascript" src="./js/socket.io.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

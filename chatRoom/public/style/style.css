@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #4B4C4B;
+}
+.loginForm{
+	margin: 200px 600px;
+}
+.container-fluid {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+}
+.speakPane {
+	text-align: left;
+	padding: 0;
+	height: 400px;
+	width: 400px;
+	background: #FFFFFF;
+	list-style: none;
+}
+.bottom {
+	width: 600px;
+	height: 50px;
+	margin-top: 365px;
+	position: absolute;
+}
+.emoji {
+	padding: 0;
+	height: 150px;
+	width: 317px;
+	display: none;
+    position: absolute;
+    background: #FDFDFD;
+    margin-top: -210px;
+    margin-left: 398px;
+    overflow-y: auto;
+}
+.emoji img {
+	width: 50px;
+	height: 50px;
+}
+.emoji img:hover {
+	cursor: pointer;
+	border: 1px solid #6C6B6B;
+}
+.main ul{
+	float: left;
+}
+.userlist{
+	text-align: left;
+	background: #A6FAC3;
+	height: 400px;
+	width: 150px;
+	overflow-y: scroll;
+}
+.userlist li{
+	cursor: pointer;
+	background: #6E6E70;
+}
+.userlist li:hover {
+	background: #4A9C69;
+}
+li.first {
+	background: #91848A;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #F77B07;
+}
+.voice {
+	margin-left: -260px;
+}
+
