@@ -1,4 +1,4 @@
-var ws = io("ws://139.199.157.153:3000")
+var ws = io("ws://127.0.0.1:3000")
 var username = ""
 
 ws.on('message',function(data){
@@ -26,7 +26,7 @@ ws.on('login', function (obj) {
 	console.log(obj)
 	var template = $("#userlist").html()
 	var data = []
-	$("#onlinecount").html(obj.onlineCount)
+	
 	for(var user in obj.onlineUsers){
 		data.push({
 			nickname: user
@@ -34,13 +34,13 @@ ws.on('login', function (obj) {
 	}
 	console.log(data)
 	$('.speakPane').append('<li style="text-align:center;color:#0FF805;font-size:12px">'+obj.user.nickname+'加入聊天室</li>')
-	$(".userlist").append(Mustache.render(template, data))
+	$(".userlist").html(Mustache.render(template, data))
+	$("#onlinecount").html(obj.onlineCount)
 
 })
 ws.on('logout', function(obj) {
 	var template = $("#userlist").html()
 	var data = []
-	$("#onlinecount").html(obj.onlineCount)
 	for(var user in obj.onlineUsers){
 		data.push({
 			nickname: user
@@ -48,7 +48,8 @@ ws.on('logout', function(obj) {
 	}
 	console.log(data)
 	$('.speakPane').append('<li style="text-align:center;color:#FE10DA;font-size:12px">'+obj.user.nickname+'离开聊天室</li>')
-	$(".userlist").append(Mustache.render(template, data))
+	$(".userlist").html(Mustache.render(template, data))
+	$("#onlinecount").html(obj.onlineCount)
 })
 
 ws.on('confirm_nickname', function (user) {
