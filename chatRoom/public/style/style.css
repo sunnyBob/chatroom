@@ -9,7 +9,8 @@ body {
 	margin: 200px 600px;
 }
 .container-fluid {
-	width: 600px;
+	width: 1200px;
+	height: 100%;
 	margin: 0 auto;
 	text-align: center;
 	display: none;
@@ -17,15 +18,15 @@ body {
 .speakPane {
 	text-align: left;
 	padding: 0;
-	height: 400px;
-	width: 400px;
+	height: 1500px;
+	width: 70%;
 	background: #FFFFFF;
 	list-style: none;
 }
 .bottom {
 	width: 600px;
 	height: 50px;
-	margin-top: 365px;
+	margin-top: 1460px;
 	position: absolute;
 }
 .emoji {
@@ -35,8 +36,8 @@ body {
 	display: none;
     position: absolute;
     background: #FDFDFD;
-    margin-top: -210px;
-    margin-left: 398px;
+    margin-top: -250px;
+    margin-left: 30px;
     overflow-y: auto;
 }
 .emoji img {
@@ -53,8 +54,8 @@ body {
 .userlist{
 	text-align: left;
 	background: #A6FAC3;
-	height: 400px;
-	width: 150px;
+	height: 1500px;
+	width: 30%;
 	overflow-y: scroll;
 }
 .userlist li{
